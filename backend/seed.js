@@ -8,9 +8,6 @@ async function seed() {
   try {
     console.log('Connected to database via Prisma...');
 
-    // Clear existing data? Optional.
-    // await prisma.oPT_Party.deleteMany({}); 
-
     const recordsToCreate = 100;
     const data = [];
 
@@ -18,11 +15,11 @@ async function seed() {
       const firstName = faker.person.firstName();
       const lastName = faker.person.lastName();
       const phone = faker.phone.number('##########');
-      const ssn = faker.string.numeric(3) + '-' + faker.string.numeric(2) + '-' + faker.string.numeric(4); // Simple SSN format
+      const ssn = faker.string.numeric(3) + '-' + faker.string.numeric(2) + '-' + faker.string.numeric(4); 
       const gender = faker.helpers.arrayElement(GENDERS);
       const age = faker.number.int({ min: 10, max: 90 });
 
-      // Truncate to ensure safety
+      
       const safeFirstName = firstName.substring(0, 100);
       const safeLastName = lastName.substring(0, 100);
       const safePhone = phone.substring(0, 20);

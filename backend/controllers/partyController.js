@@ -9,7 +9,6 @@ exports.getGenderList = async (req, res) => {
             },
         });
 
-        // Format to match previous output: [{ gender: 'Male', count: 20 }]
         const formatted = result.map(item => ({
             gender: item.PTY_Gender,
             count: item._count.PTY_Gender
@@ -68,7 +67,6 @@ exports.getClientsForAge = async (req, res) => {
             }
         });
 
-        // Map to camelCase if frontend expects it
         const formatted = clients.map(client => ({
             firstName: client.PTY_FirstName,
             lastName: client.PTY_LastName,

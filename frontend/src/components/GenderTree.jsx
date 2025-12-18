@@ -25,7 +25,6 @@ const GenderNode = ({ gender, count, selectedGender, selectedAgeRange, onSelectA
                     mx: 2,
                     borderRadius: 2,
                     transition: 'all 0.2s',
-                    // Use theme.palette.action.selected or alpha(primary) for better contrast in both modes
                     bgcolor: (selectedGender === gender)
                         ? alpha(theme.palette.primary.main, 0.12)
                         : 'transparent',
@@ -40,7 +39,6 @@ const GenderNode = ({ gender, count, selectedGender, selectedAgeRange, onSelectA
                         mr: 2,
                         width: 32,
                         height: 32,
-                        // Dynamic background based on mode
                         bgcolor: open
                             ? 'primary.main'
                             : alpha(theme.palette.text.primary, 0.05),
@@ -74,7 +72,7 @@ const GenderNode = ({ gender, count, selectedGender, selectedAgeRange, onSelectA
                                     mx: 2,
                                     borderRadius: 2,
                                     position: 'relative',
-                                    bgcolor: isSelected ? 'primary.main' : 'transparent', // Active State
+                                    bgcolor: isSelected ? 'primary.main' : 'transparent', 
                                     color: isSelected ? 'primary.contrastText' : 'text.primary',
                                     '&::before': {
                                         content: '""',
@@ -83,7 +81,7 @@ const GenderNode = ({ gender, count, selectedGender, selectedAgeRange, onSelectA
                                         top: '50%',
                                         width: 12,
                                         height: 2,
-                                        bgcolor: alpha(theme.palette.text.secondary, 0.2), // Connector line
+                                        bgcolor: alpha(theme.palette.text.secondary, 0.2), 
                                         transform: 'translateY(-50%)'
                                     },
                                     '&:hover': {

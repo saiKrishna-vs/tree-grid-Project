@@ -328,7 +328,6 @@ const ClientGrid = ({ clients, selectedAgeRange, selectedGender }) => {
     );
 };
 
-// Helper Components
 const InfoRow = ({ icon, label, value, highlight }) => (
     <Stack direction="row" alignItems="center" justifyContent="space-between">
         <Stack direction="row" spacing={1} alignItems="center" color="text.secondary">
